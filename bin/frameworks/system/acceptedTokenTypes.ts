@@ -1,0 +1,20 @@
+export const acceptedTokenTypes: string[] = [
+  'borderwidths',
+  'color',
+  'colors',
+  'delays',
+  'durations',
+  'easings',
+  'fontfamilies',
+  'fontsizes',
+  'fontweights',
+  'letterspacings',
+  'lineheights',
+  'mediaqueries',
+  'opacities',
+  'radii',
+  'shadows',
+  'spacing',
+  'spacings',
+  'zindices'
+];

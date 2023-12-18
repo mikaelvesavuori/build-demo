@@ -1,0 +1,39 @@
+export type Tokens = Record<string, string | number>;
+
+export type BorderWidthTokens = Tokens;
+export type ColorTokens = Record<string, string | Tokens>;
+export type DelayTokens = Tokens;
+export type DurationTokens = Tokens;
+export type EasingTokens = Tokens;
+export type FontSizeTokens = Tokens;
+export type FontTokens = Tokens;
+export type FontWeightTokens = Tokens;
+export type LetterSpacingTokens = Tokens;
+export type LineHeightTokens = Tokens;
+export type MediaQueryTokens = Tokens;
+export type OpacityTokens = Tokens;
+export type RadiusTokens = Tokens;
+export type ShadowTokens = Tokens;
+export type SpacingTokens = Tokens;
+export type ZindexTokens = Tokens;
+
+export type TokenOperations = {
+  borderwidths: () => Tokens;
+  color: () => Tokens;
+  colors: () => Tokens;
+  delays: () => Tokens;
+  durations: () => Tokens;
+  easings: () => Tokens;
+  fontfamilies: () => Tokens;
+  fontsizes: () => Tokens;
+  fontweights: () => Tokens;
+  letterspacings: () => Tokens;
+  lineheights: () => Tokens;
+  mediaqueries: () => Tokens;
+  opacities: () => Tokens;
+  radii: () => Tokens;
+  shadows: () => Tokens;
+  spacing: () => Tokens;
+  spacings: () => Tokens;
+  zindices: () => Tokens;
+};

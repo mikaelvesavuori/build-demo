@@ -1,0 +1,122 @@
+{
+  "name": "figmagic",
+  "version": "4.5.10",
+  "description": "Figmagic is the missing piece between DevOps and design: Generate design tokens, export graphics, and extract design token-driven React components from your Figma documents.",
+  "homepage": "https://www.figmagic.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelvesavuori/figmagic.git"
+  },
+  "author": "Mikael Vesavuori",
+  "keywords": [
+    "figma",
+    "figma-api",
+    "tokens",
+    "ux",
+    "design-tokens",
+    "design-system",
+    "design-systems",
+    "design-specs"
+  ],
+  "license": "MIT",
+  "bin": {
+    "figmagic": "build/index.js"
+  },
+  "contributors": [
+    {
+      "name": "Victor",
+      "url": "https://github.com/vspedr"
+    },
+    {
+      "name": "Zack Brown",
+      "url": "https://github.com/zackbrown"
+    },
+    {
+      "name": "mike-lvov",
+      "url": "https://github.com/mike-lvov"
+    },
+    {
+      "name": "flo-sch",
+      "url": "https://github.com/flo-sch"
+    },
+    {
+      "name": "Stanko",
+      "url": "https://github.com/Stanko"
+    },
+    {
+      "name": "mykhailoInnovecs",
+      "url": "https://github.com/mykhailoInnovecs"
+    },
+    {
+      "name": "opauloh",
+      "url": "https://github.com/opauloh"
+    },
+    {
+      "name": "peeja",
+      "url": "https://github.com/Peeja"
+    },
+    {
+      "name": "Ishmam156",
+      "url": "https://github.com/Ishmam156"
+    },
+    {
+      "name": "smmccabe",
+      "url": "https://github.com/smmccabe"
+    },
+    {
+      "name": "mitchdotdeveloper",
+      "url": "https://github.com/mitchdotdeveloper"
+    }
+  ],
+  "files": [
+    "build/index.js",
+    "build/index.js.LICENSE.txt",
+    "templates/"
+  ],
+  "scripts": {
+    "figmagic": "node build/index.js",
+    "clean": "rm -rf .figmagic-trash/",
+    "build": "rm -rf build && npx webpack",
+    "test": "npx jest __tests__ --collectCoverage",
+    "test:watch": "npx jest --clearCache && jest __tests__ --collectCoverage --watch",
+    "test:silent": "npx jest --reporters jest-silent-reporter --collectCoverage=false",
+    "test:types": "npx type-coverage --strict --at-least 97.5",
+    "lint": "npx eslint './bin/**/*.ts' --quiet --fix",
+    "docs": "npm run docs:typedoc && npx arkit && cp -r images typedoc-docs",
+    "docs:typedoc": "npx typedoc --entryPoints bin --entryPointStrategy expand --exclude '**/*+(test).ts' --externalPattern 'node_modules/**/*' --excludeExternals --customCss ./typedoc.theme.css --out typedoc-docs",
+    "licenses": "npx license-compliance --direct --allow 'MIT;ISC;0BSD;BSD-2-Clause;BSD-3-Clause;Apache-2.0;Unlicense;CC0-1.0'",
+    "licenses:checker": "npx license-compatibility-checker",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "7",
+    "@babel/preset-env": "7",
+    "@babel/preset-typescript": "7",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "arkit": "1",
+    "babel-loader": "9",
+    "eslint": "8",
+    "eslint-config-prettier": "9",
+    "eslint-plugin-prettier": "5",
+    "husky": "8",
+    "jest": "29",
+    "jest-silent-reporter": "0",
+    "license-compatibility-checker": "latest",
+    "license-compliance": "latest",
+    "msw": "latest",
+    "prettier": "latest",
+    "pretty-quick": "latest",
+    "trash": "7",
+    "ts-jest": "29",
+    "ts-loader": "9",
+    "type-coverage": "2",
+    "typedoc": "latest",
+    "typescript": "5",
+    "webpack": "5",
+    "webpack-cli": "5",
+    "webpack-shebang-plugin": "1"
+  }
+}

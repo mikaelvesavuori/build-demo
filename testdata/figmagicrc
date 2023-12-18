@@ -1,0 +1,16 @@
+{
+  "debugMode": false,
+  "fontUnit": "rem",
+  "figmaData": "figma.json",
+  "figmagicFolder": ".figmagic",
+  "outputFolderTokens": "tokens",
+  "outputFormatTokens": "ts",
+  "outputFolderGraphics": "graphics",
+  "outputFormatGraphics": "svg",
+  "outputScaleGraphics": 1,
+  "spacingUnit": "rem",
+  "usePostscriptFontNames": false,
+  "useLiteralFontFamilies": false,
+  "token": "***",
+  "url": "***"
+}
